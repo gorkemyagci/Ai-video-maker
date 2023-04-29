@@ -1,0 +1,48 @@
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #000000ed;
+    color: white
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.loader-loading {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid rgb(255, 255, 255, .2);
+  border-top-color: transparent;
+  animation: rot1 1.2s linear infinite;
+}
+
+@keyframes rot1 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-opacity {
+  opacity: 0;
+  animation: opacity 2s linear infinite;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.scrollable{
+  scroll-behavior: smooth;
+}
